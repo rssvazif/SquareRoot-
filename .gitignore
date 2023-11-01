@@ -1,32 +1,30 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <iostream>
+#include <cmath>
+using namespace std;
+void calculations(int [],int);
+int main()
+{int size_arr;
+ cout<<"please enter size of array \n";
+ cin>>size_arr;
+  int array[size_arr];
+ for(int i=0;i<size_arr;i++){
+        cout<<"please enter array \n";
+   cin>>array[i];}
+ calculations(array,size_arr);
+    return 0;
+}
+void calculations(int array[],int size_arr)
+{ for(int i=0;i<size_arr;i++)
+  { int squareRoot=static_cast<int>(sqrt(array[i]));
+    if(squareRoot*squareRoot==array[i])
+   {
+   array[i]=sqrt(array[i]);
+  }
+   else
+    {
+     array[i]=pow(array[i],2);
+   }
+}
+  for(int i=0;i<size_arr;i++)
+   cout<<array[i]<<endl;
+}
