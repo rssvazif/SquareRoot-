@@ -1,3 +1,4 @@
+//this is a simple program
 #include <iostream>
 #include <cmath>
 using namespace std;
